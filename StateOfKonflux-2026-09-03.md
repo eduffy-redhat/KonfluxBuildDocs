@@ -6,7 +6,7 @@ To get a code change into a working build of rhdr ramen, you will need to build 
 2. Copy the digest of the built image from konflux into the `rhdr-hub-operator-bundle` and `rhdr-cluster-operator-bundle` repos and allow them to build
 3. Copy both new digests into the `rhdr-catalog` File Based Catalog (FBC) repo's bundle-images.env file and allow that to rebuild
 
-Then and only then can you copy the digest of the `rhdr-catalog` (FBC) into your cluster or validated pattern to get the latest code changes.
+Then and only then can you copy the digest of the `rhdr-catalog` (FBC) into a catalog-source in your cluster or validated pattern to get the latest code changes.
 
 
 See the diagram below for a visual representation of component relationships in [Konflux](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/components).
