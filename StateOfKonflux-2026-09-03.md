@@ -56,5 +56,5 @@ We've instead created a public [quay.io mirror](https://quay.io/repository/opens
 
 # Mirroring
 
-To mirror the images in the `rhdr-catalog` FBC repo to the [public quay repo](https://quay.io/repository/openshift-virtualization-dr/rhdr-mirror) you can run the script `scripts/mirror-all-to-quay.sh` in the `rhdr-catalog` repo. This will scan the entire repo for images and copy them over to our mirror while keeping the digests the same. The images can now be referenced by digests from that repo. The tags are automatically generated to be unique so no images get overwritten, but they can no longer be referenced by name or tag in the mirror.
+To mirror the images in the `rhdr-catalog` FBC repo to the [public quay repo](https://quay.io/repository/openshift-virtualization-dr/rhdr-mirror) you can run the script [scripts/mirror-all-to-quay.sh](https://gitlab.cee.redhat.com/rh-ocp-dr/rhdr-catalog/-/blob/main/scripts/mirror-all-to-quay.sh) in the `rhdr-catalog` repo. This will scan the entire repo for images and copy them over to our mirror while keeping the digests the same. The images can now be referenced by digests from that repo. The tags are automatically generated to be unique so no images get overwritten, but they can no longer be referenced by name or tag in the mirror.
 
