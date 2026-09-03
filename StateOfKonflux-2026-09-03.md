@@ -9,7 +9,7 @@ To get a code change into a working build of rhdr ramen, you will need to build 
 Then and only then can you copy the digest of the `rhdr-catalog` (FBC) into your cluster or validated pattern to get the latest code changes.
 
 
-See the diagram below for a visual representation of component relationships in Konflux.
+See the diagram below for a visual representation of component relationships in [Konflux](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/components).
 **All these repos can be found in our gitlab project [HERE](https://gitlab.cee.redhat.com/rh-ocp-dr)**
 
 ```mermaid
@@ -30,7 +30,9 @@ _(Note that I've omitted rhdr-must-gather and ramendr-console. The must-gather i
 
 # Building
 
-Konflux is set up to build images on push to the `4.22` branch as well as any commit added to a Merge Request (MR).
+[Konflux](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/components) is set up to build images on push to the `4.22` branch as well as any commit added to a Merge Request (MR).
+
+_(The configuration for the pipelines is in the `.tekton` directory in each git repo)_
 
 While the MR builds can be good to quickly validate that the build will succeed and can be pulled for manual testing, its somewhat tricky to get them built into the catalog image.
 
@@ -48,7 +50,7 @@ There is a way to automate this flow but it would be a bespoke solution and we h
 
 # Releasing
 
-Konflux takes a snapshot on every successful push build. If the build succeeds and the Conforma tests (aka EnterpriseContract, shown in Konflux as 'Verify') pass, then the snapshot will be "Released".
+[Konflux](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/components) takes a [Snapshot](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/snapshots) on every successful push build. If the build succeeds and the Conforma tests (aka EnterpriseContract, shown in Konflux as 'Verify') pass, then the snapshot will be [Released](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/releases).
 
 The released images live in a staging image repository; this is ok for testing but normal openshift environments don't have access to that repository and giving them tokens would be clunky and impractical.
 
