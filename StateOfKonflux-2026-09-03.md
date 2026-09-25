@@ -11,6 +11,7 @@ Then and only then can you copy the digest of the `rhdr-catalog` (FBC) into a ca
 
 See the diagram below for a visual representation of component relationships in [Konflux](https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/rhdr-tenant/applications/rhdr-4-22/components).
 **All these repos can be found in our gitlab project [HERE](https://gitlab.cee.redhat.com/rh-ocp-dr)**
+**(Note: rh-ocp-dr/ramen is being replaced by [github.com/redhat-dr/ramen](https://github.com/redhat-dr/ramen))**
 
 ```mermaid
 flowchart
